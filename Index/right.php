@@ -6,7 +6,7 @@ error_reporting(0);
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title></title>
 <script type="text/javascript" src="../public/js/jquery-1.10.1.min.js"></script>
 <script type="text/javascript" src="../public/js/jquery.effect.js"></script>
@@ -182,15 +182,15 @@ a, a:visited, a:hover, a:active { text-decoration: none; color: inherit; }
 		<table width="60%" border="0" cellpadding="0" cellspacing="0">
 			<tbody>
 				<tr>
-					<td width="45"><a href="" target="">È«ÂåÑô</a></td>
-					<td width="35"><a href="" target="">Î÷¹¤</a></td>
-					<td width="35"><a href="" target="">½§Î÷</a></td>
-					<td width="35"><a href="" target="">ÀÏ³Ç</a></td>
-					<td width="35"><a href="" target="">²øºÓ</a></td>
-					<td width="35"><a href="" target="">ÂåÁú</a></td>
-					<td width="35"><a href="" target="">¸ß¿ª</a></td>
-					<td width="35"><a href="" target="">ÒÁ±õ</a></td>
-					<td width="35"><a href="" target="">¼ªÀû</a></td>
+					<td width="45"><a href="" target="">å…¨æ´›é˜³</a></td>
+					<td width="35"><a href="" target="">è¥¿å·¥</a></td>
+					<td width="35"><a href="" target="">æ¶§è¥¿</a></td>
+					<td width="35"><a href="" target="">è€åŸ</a></td>
+					<td width="35"><a href="" target="">ç¼ æ²³</a></td>
+					<td width="35"><a href="" target="">æ´›é¾™</a></td>
+					<td width="35"><a href="" target="">é«˜å¼€</a></td>
+					<td width="35"><a href="" target="">ä¼Šæ»¨</a></td>
+					<td width="35"><a href="" target="">å‰åˆ©</a></td>
 				</tr>
 			</tbody>
 		</table>
@@ -212,7 +212,7 @@ a, a:visited, a:hover, a:active { text-decoration: none; color: inherit; }
                                                             WHERE a.id = $category_id";
                                                     $sqldata = mysql_query($sql, $conn);
                                                     $maindata=mysql_fetch_array($sqldata);
-                                                    echo '<a href="index.html" target="_parent">È«²¿·ÖÀà</a>'.'>'.$maindata['name_l1'].'>'.$maindata['name_l2'];
+                                                    echo '<a href="index.html" target="_parent">å…¨éƒ¨åˆ†ç±»</a>'.'>'.$maindata['name_l1'].'>'.$maindata['name_l2'];
                                                           
                                                     ?>
                                                 </td>
@@ -224,12 +224,12 @@ a, a:visited, a:hover, a:active { text-decoration: none; color: inherit; }
 			<table width="100%" border="0" cellpadding="0" cellspacing="0">
 				<tbody>
 					<tr>
-						<td width="50">ÏÔÊ¾·¶Î§</td>
+						<td width="50">æ˜¾ç¤ºèŒƒå›´</td>
 						<td style="padding-left: 10px;">
 							<select id="range">
-								<option value="0" selected>È«²¿¿É¼û</option>
-								<option value="1" >ÎÒµÄÆ«ºÃ</option>
-								<option value="2" >ÎåĞÇ±£ÕÏ</option>
+								<option value="0" selected>å…¨éƒ¨å¯è§</option>
+								<option value="1" >æˆ‘çš„åå¥½</option>
+								<option value="2" >äº”æ˜Ÿä¿éšœ</option>
 							</select>
 						</td>
 					</tr>
@@ -240,7 +240,7 @@ a, a:visited, a:hover, a:active { text-decoration: none; color: inherit; }
 			<table width="100%" border="0" cellpadding="0" cellspacing="0">
 				<tbody>
 					<tr>
-						<td width="70">ÏÔÊ¾Ä£Ê½</td>
+						<td width="70">æ˜¾ç¤ºæ¨¡å¼</td>
 						<td width="35"><a href="" target=""><img src="../Public/image/font-390.png" style="height: 25px;"></a></td>
 						<td width="35"><a href="" target=""><img src="../Public/image/font-388.png" style="height: 25px;"></a></td>
 						<td width="35"><a href="" target=""><img src="../Public/image/font-317.png" style="height: 25px;"></a></td>
@@ -252,12 +252,12 @@ a, a:visited, a:hover, a:active { text-decoration: none; color: inherit; }
 			<table width="100%"  border="0" cellpadding="0" cellspacing="0">
 				<tbody>
 					<tr>
-						<td width="50" valign="center">ÅÅĞò·½Ê½</td>
+						<td width="50" valign="center">æ’åºæ–¹å¼</td>
 						<td style="padding-left: 10px;">
 						<select id="range">
-							<option value="0" selected>ĞÅÓş¶È</option>
-							<option value="1" >Ê±¼ä</option>
-							<option value="2" >ÆÀÂÛÊı</option>
+							<option value="0" selected>ä¿¡èª‰åº¦</option>
+							<option value="1" >æ—¶é—´</option>
+							<option value="2" >è¯„è®ºæ•°</option>
 						</select>
 						</td>
 					</tr>
@@ -276,28 +276,28 @@ a, a:visited, a:hover, a:active { text-decoration: none; color: inherit; }
 		require '../Index/card.php';
 		?>
 		</div>
-		<a href="javascript:;" class="get_more">¸ü¶à¡­</a>
+		<a href="javascript:;" class="get_more">æ›´å¤šâ€¦</a>
 	</div>
 
 	<div class="scroll">
 		<div class="scroll_ask">
 			<div sytle="right:0px; opacity:0; display:block;">
-				<a class="scrollpanel_ask">ÔÚÏß°ïÖú</a>
+				<a class="scrollpanel_ask">åœ¨çº¿å¸®åŠ©</a>
 			</div>
 		</div>
 		<div class="scroll_top">
 			<div sytle="right:0px; opacity:0; display:block;">
-				<a class="scrollpanel_top">·µ»ØÖÃ¶¥</a>
+				<a class="scrollpanel_top">è¿”å›ç½®é¡¶</a>
 			</div>
 		</div>
 	</div> 
 
 	<div class="foot">
-		<div class="footinfo" style="padding-left: 20px;"><a href="" target="">ÃâÔğÉùÃ÷</a></div>
-		<div class="footinfo" style="padding-left: 60px;"><a href="" target="">Ê¹ÓÃÌõ¿î</a></div>
+		<div class="footinfo" style="padding-left: 20px;"><a href="" target="">å…è´£å£°æ˜</a></div>
+		<div class="footinfo" style="padding-left: 60px;"><a href="" target="">ä½¿ç”¨æ¡æ¬¾</a></div>
 		<div class="footinfo" style="padding-left: 125px;">copy right 2013 - 2016 reserved</div>
-		<div class="footinfo" style="padding-left: 80px;"><a href="" target="">¿ª·¢ÈËÔ±</a></div>
-		<div class="footinfo" style="padding-left: 60px;"><a href="" target="">¾Ù±¨²»Á¼ĞÅÏ¢</a></div>
+		<div class="footinfo" style="padding-left: 80px;"><a href="" target="">å¼€å‘äººå‘˜</a></div>
+		<div class="footinfo" style="padding-left: 60px;"><a href="" target="">ä¸¾æŠ¥ä¸è‰¯ä¿¡æ¯</a></div>
 	</div>
 
 

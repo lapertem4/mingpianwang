@@ -1,8 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
-<title>ÓÃ»§µÇÂ¼</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ç”¨æˆ·ç™»å½•</title>
   <style type="text/css">
     html{font-size:12px;}
   fieldset{width:300px; margin: 0 auto;}
@@ -20,13 +20,13 @@ function InputCheck(LoginForm)
 {
   if (LoginForm.username.value == "")
   {
-    alert("ÇëÊäÈëÓÃ»§Ãû!");
+    alert("è¯·è¾“å…¥ç”¨æˆ·å!");
     LoginForm.username.focus();
     return (false);
   }
   if (LoginForm.password.value == "")
   {
-    alert("ÇëÊäÈëÃÜÂë!");
+    alert("è¯·è¾“å…¥å¯†ç !");
     LoginForm.password.focus();
     return (false);
   }
@@ -38,18 +38,18 @@ function InputCheck(LoginForm)
 <body>
 <div>
 <fieldset>
-<legend>ÓÃ»§µÇÂ¼</legend>
+<legend>ç”¨æˆ·ç™»å½•</legend>
 <form name="LoginForm" method="post" action="login.php" onSubmit="return InputCheck(this)">
 <p>
-<label for="username" class="label"><span class="STYLE9">ÓÃ»§Ãû</span>:</label>
+<label for="username" class="label"><span class="STYLE9">ç”¨æˆ·å</span>:</label>
 <input id="username" name="username" type="text" class="input" />
 <p/>
 <p>
-<label for="password" class="label"><span class="STYLE9">ÃÜ Âë</span>:</label>
+<label for="password" class="label"><span class="STYLE9">å¯† ç </span>:</label>
 <input id="password" name="password" type="password" class="input" />
 <p/>
 <p>
-<input type="submit" name="submit" value="  È· ¶¨  " class="left" />
+<input type="submit" name="submit" value="  ç¡® å®š  " class="left" />
 </p>
 </form>
 </fieldset>
@@ -57,39 +57,39 @@ function InputCheck(LoginForm)
 <?php
 session_start();
 
-//×¢ÏúµÇÂ¼
+//æ³¨é”€ç™»å½•
 if(@$_GET['action'] == "logout"){
-	unset($_SESSION['userid']);
-	unset($_SESSION['username']);
-	echo '×¢ÏúµÇÂ¼³É¹¦£¡µã»÷´Ë´¦ <a href="login.php">µÇÂ¼</a>';
-	echo '<br />';
-	echo '************! µã»÷´Ë´¦ <a href="../index/index.html">»ØÊ×Ò³</a>';
-	exit;
+  unset($_SESSION['userid']);
+  unset($_SESSION['username']);
+  echo 'æ³¨é”€ç™»å½•æˆåŠŸï¼ç‚¹å‡»æ­¤å¤„ <a href="login.php">ç™»å½•</a>';
+  echo '<br />';
+  echo '************! ç‚¹å‡»æ­¤å¤„ <a href="../index/index.html">å›é¦–é¡µ</a>';
+  exit;
 }
 
-//µÇÂ¼
+//ç™»å½•
 if(!isset($_POST['submit'])){
-	exit;
+  exit;
 }
 
 else {
 $username = htmlspecialchars($_POST['username']);
 $password = ($_POST['password']);
 
-//°üº¬Êı¾İ¿âÁ¬½ÓÎÄ¼ş
+//åŒ…å«æ•°æ®åº“è¿æ¥æ–‡ä»¶
 include("conn.php");
-//¼ì²âÓÃ»§Ãû¼°ÃÜÂëÊÇ·ñÕıÈ·
+//æ£€æµ‹ç”¨æˆ·ååŠå¯†ç æ˜¯å¦æ­£ç¡®
 $sql="select user_id from mingpian_users where username='$username' and password='$password' limit 1";
 $result = mysql_query($sql,$conn);
 if(mysql_fetch_array($result)){
-	//µÇÂ¼³É¹¦
-	$_SESSION['username'] = $username;
-	$_SESSION['userid'] = $result['user_id'];
-	echo $username.' »¶Ó­Äã£¡½øÈë <a href="admin.php">ÓÃ»§ÖĞĞÄ</a><br />';
-	echo 'µã»÷´Ë´¦ <a href="login.php?action=logout">×¢Ïú</a> µÇÂ¼£¡<br />';
-	exit;
+  //ç™»å½•æˆåŠŸ
+  $_SESSION['username'] = $username;
+  $_SESSION['userid'] = $result['user_id'];
+  echo $username.' æ¬¢è¿ä½ ï¼è¿›å…¥ <a href="admin.php">ç”¨æˆ·ä¸­å¿ƒ</a><br />';
+  echo 'ç‚¹å‡»æ­¤å¤„ <a href="login.php?action=logout">æ³¨é”€</a> ç™»å½•ï¼<br />';
+  exit;
 } else {
-	exit('µÇÂ¼Ê§°Ü£¡µã»÷´Ë´¦ <a href="javascript:history.back(-1);">·µ»Ø</a> ÖØÊÔ');
+  exit('ç™»å½•å¤±è´¥ï¼ç‚¹å‡»æ­¤å¤„ <a href="javascript:history.back(-1);">è¿”å›</a> é‡è¯•');
 }
 }
 

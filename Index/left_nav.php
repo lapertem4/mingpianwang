@@ -1,8 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
-<title>×ó²àµ¼º½</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>å·¦ä¾§å¯¼èˆª</title>
 <script src="../Public/js/prototype.lite.js" type="text/javascript"></script>
 <script src="../Public/js/moo.fx.js" type="text/javascript"></script>
 <script src="../Public/js/moo.fx.pack.js" type="text/javascript"></script>
@@ -156,39 +156,39 @@ H1 a {
 		</div>
 		<div class="menu_detail_total" style="height: 200px;">
 			<div class="menu_detail">
-				<H1 class="title"><A href="javascript:void(0)">+ ¹«¹²·þÎñ</a></H1>
+				<H1 class="title"><A href="javascript:void(0)">+ å…¬å…±æœåŠ¡</a></H1>
 				<div class="content">
-					<a href="right.php?category_id=3" target="right">×°ÐÞ</a>
-					<a href="right.php?category_id=5" target="right">µçÐÅÍ¶Ëß</a>
-					<a href="right.php?category_id=6" target="right">Ë°Îñ</a>
-					<a href="right.php?category_id=7" target="right">Éç±£</a><br />
-					<a href="right.php?category_id=8" target="right">ÊÐ³¤ÈÈÏß</a>
-					<a href="" target="">¸ü¶à</a>
+					<a href="right.php?category_id=3" target="right">è£…ä¿®</a>
+					<a href="right.php?category_id=5" target="right">ç”µä¿¡æŠ•è¯‰</a>
+					<a href="right.php?category_id=6" target="right">ç¨ŽåŠ¡</a>
+					<a href="right.php?category_id=7" target="right">ç¤¾ä¿</a><br />
+					<a href="right.php?category_id=8" target="right">å¸‚é•¿çƒ­çº¿</a>
+					<a href="" target="">æ›´å¤š</a>
 				</div>
-				<H1 class="title"><A href="javascript:void(0)">+ ¼ÒµçÎ¬ÐÞ</a></H1>
+				<H1 class="title"><A href="javascript:void(0)">+ å®¶ç”µç»´ä¿®</a></H1>
 				<div class="content">
-					<a href="right.php?category_id=9" target="right">µçÄÔÎ¬ÐÞ</a>
-					<a href="right.php?category_id=10" target="right">¼Ò¾ÓÎ¬ÐÞ</a>
-					<a href="right.php?category_id=11" target="right">Ë®¹ÜÊèÍ¨</a><br />
-					<a href="right.php?category_id=12" target="right">ÍâÂôËÍË®</a>
-					<a href="right.php?category_id=13" target="right">ÐÞËøÇËËø</a>
-					<a href="" target="">¸ü¶à</a>
+					<a href="right.php?category_id=9" target="right">ç”µè„‘ç»´ä¿®</a>
+					<a href="right.php?category_id=10" target="right">å®¶å±…ç»´ä¿®</a>
+					<a href="right.php?category_id=11" target="right">æ°´ç®¡ç–é€š</a><br />
+					<a href="right.php?category_id=12" target="right">å¤–å–é€æ°´</a>
+					<a href="right.php?category_id=13" target="right">ä¿®é”æ’¬é”</a>
+					<a href="" target="">æ›´å¤š</a>
 				</div>
-				<H1 class="title"><A href="javascript:void(0)">+ ½ÌÓýÅàÑµ</a></H1>
+				<H1 class="title"><A href="javascript:void(0)">+ æ•™è‚²åŸ¹è®­</a></H1>
 				<div class="content">
-				  	<a href="right.php?category_id=14" target="right">ÐÂ¶«·½</a>
-					<a href="right.php?category_id=15" target="right">¿¼ÑÐ</a>
-					<a href="right.php?category_id=16" target="right">ÑÅË¼</a><br />
-					<a href="right.php?category_id=17" target="right">Ñ§×ö¹·²»Àí°ü×Ó</a>
-					<a href="" target="">¸ü¶à</a>
+				  	<a href="right.php?category_id=14" target="right">æ–°ä¸œæ–¹</a>
+					<a href="right.php?category_id=15" target="right">è€ƒç ”</a>
+					<a href="right.php?category_id=16" target="right">é›…æ€</a><br />
+					<a href="right.php?category_id=17" target="right">å­¦åšç‹—ä¸ç†åŒ…å­</a>
+					<a href="" target="">æ›´å¤š</a>
 				</div>
-				<H1 class="title"><a href="javascript:void(0)">+ ¼æÖ°´ú°ì</a></H1>
+				<H1 class="title"><a href="javascript:void(0)">+ å…¼èŒä»£åŠž</a></H1>
 				<div class="content">
-					<a href="right.php?category_id=18" target="right">ËÄÁù¼¶¿¼ÊÔ</a>
-					<a href="right.php?category_id=19" target="right">´úÔÐ</a>
-					<a href="right.php?category_id=20" target="right">´ú¿ª¼Ò³¤»á</a><br />
-					<a href="right.php?category_id=21" target="right">´úÐ»Êî¼Ù×÷Òµ</a>
-					<a href="" target="">¸ü¶à</a>
+					<a href="right.php?category_id=18" target="right">å››å…­çº§è€ƒè¯•</a>
+					<a href="right.php?category_id=19" target="right">ä»£å­•</a>
+					<a href="right.php?category_id=20" target="right">ä»£å¼€å®¶é•¿ä¼š</a><br />
+					<a href="right.php?category_id=21" target="right">ä»£è°¢æš‘å‡ä½œä¸š</a>
+					<a href="" target="">æ›´å¤š</a>
 				</div>
 			</div>
 		</div>
@@ -198,15 +198,15 @@ H1 a {
 				<tbody>
 					<tr height="10">
 						<td width="20"><img src="../Public/image/font-72.png" style="height: 25px;"></td>
-						<td><a href="" target="">ÍÆ¼öÓÐÀñ</a></td>
+						<td><a href="" target="">æŽ¨èæœ‰ç¤¼</a></td>
 					</tr>
 					<tr>
 						<td width="20"><img src="../Public/image/font-307.png" style="height: 25px;"></td>
-						<td><a href="" target="">±ãÃñ·þÎñÏä</a></td>
+						<td><a href="" target="">ä¾¿æ°‘æœåŠ¡ç®±</a></td>
 					</tr>
 					<tr>
 						<td width="20"><img src="../Public/image/font-261.png" style="height: 25px;"></td>
-						<td><a href="" target="">¹ØÓÚÎÒÃÇ</a></td>
+						<td><a href="" target="">å…³äºŽæˆ‘ä»¬</a></td>
 					</tr>
 					<tr>
 						<td width="20"><img src="../Public/image/font-349.png" style="height: 25px;"></td>

@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <style type="text/css">
 body
 {
@@ -13,11 +13,11 @@ a, a:visited, a:hover, a:active { text-decoration: none; color: inherit; }
 
 #main
 {
-	width:400px;
+    width:400px;
         height: 1200px;
-	margin-top:40px;
-	margin-left:250px;
-	margin-right:auto;
+    margin-top:40px;
+    margin-left:250px;
+    margin-right:auto;
 }
 
 #main table tr td
@@ -33,12 +33,12 @@ a, a:visited, a:hover, a:active { text-decoration: none; color: inherit; }
 </head>
 <body>
     <div id="main">
-    	<table width='400' height='125' bgcolor="#003F7D" cellpadding="8" cellspacing="1">
+        <table width='400' height='125' bgcolor="#003F7D" cellpadding="8" cellspacing="1">
             <tr bgcolor="#FFFFFF" height="25">
-                <td>地区ID</td>
-                <td>地区名称</td>
-                <td>所在名片数</td>
-                <td>用户数</td>
+                <td>鍦板尯ID</td>
+                <td>鍦板尯鍚嶇О</td>
+                <td>鎵�鍦ㄥ悕鐗囨暟</td>
+                <td>鐢ㄦ埛鏁�</td>
             </tr>
             <?php
                 error_reporting(0);

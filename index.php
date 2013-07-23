@@ -1,8 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=GB2312">
-        <title>ÃûÆ¬Ç½</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>åç‰‡å¢™</title>
 		<link rel="stylesheet" type="text/css" href="Public/css/css.css" />  
     </head>
     <body>
@@ -13,28 +13,29 @@
 			<div class="logo_clear"></div>
 			<div class="menu">
 				<ul>
-					<li><a href="Index/index.html">Ê×Ò³</a></li>
-					<li>ÃûÆ¬</li>
-					<li>Éú»î</li>
-					<li>È¦×Ó</li>
-					<li>ÂÛÌ³</li>
-					<li>°ïÖú</li>					
+					<li><a href="Index/index.html">é¦–é¡µ</a></li>
+					<li>åç‰‡</li>
+                                        <li><a href="app/say/index.php">è¯é¢˜</a></li>
+					<li>ç”Ÿæ´»</li>
+					<li>åœˆå­</li>
+					<li>è®ºå›</li>
+					<li>å¸®åŠ©</li>					
 				</ul>
 			</div>
 			<div class="menu_clear"></div>
 			<div class="right_head">
 				<ul>
-					<li>ÒÑ¾­ÓÐÕÊºÅÁË?<a href="Admin/login.php">µÇÂ¼</a></li>
-					<li>»òÕß&nbsp;<a href="Admin/reg.php">Ãâ·Ñ×¢²áÒ»¸ö</a></li>
+					<li>å·²ç»æœ‰å¸å·äº†?<a href="Admin/login.php">ç™»å½•</a></li>
+					<li>æˆ–è€…&nbsp;<a href="Admin/reg.php">å…è´¹æ³¨å†Œä¸€ä¸ª</a></li>
 				</ul>	
 			</div>
 		</div>
 		
 		<div class="content">
 			<div class="title">
-				<div class="title_word"><p>ÈÃÃ¿¸öÐèÒªÄãµÄÈË¶¼ÄÜÕÒµ½Äã!</p></div>
+				<div class="title_word"><p>è®©æ¯ä¸ªéœ€è¦ä½ çš„äººéƒ½èƒ½æ‰¾åˆ°ä½ !</p></div>
 				<div id="title_signup">
-					<div class="title_signup_word"><a href="Admin/reg.php">À´°É£¬¼ÓÈëÎÒÃÇ</a></div>
+					<div class="title_signup_word"><a href="Admin/reg.php">æ¥å§ï¼ŒåŠ å…¥æˆ‘ä»¬</a></div>
 				</div>
 			</div>
 			<div class="wall">
@@ -47,11 +48,11 @@
 		</div>
 		
 		<div class="footer">
-			<div class="footinfo" style="padding-left: 20px;"><a href="" target="">ÃâÔðÉùÃ÷</a></div>
-			<div class="footinfo" style="padding-left: 60px;"><a href="" target="">Ê¹ÓÃÌõ¿î</a></div>
+			<div class="footinfo" style="padding-left: 20px;"><a href="" target="">å…è´£å£°æ˜Ž</a></div>
+			<div class="footinfo" style="padding-left: 60px;"><a href="" target="">ä½¿ç”¨æ¡æ¬¾</a></div>
 			<div class="footinfo" style="padding-left: 125px;">copy right 2013 - 2016 reserved</div>
-			<div class="footinfo" style="padding-left: 100px;"><a href="" target="">¿ª·¢ÈËÔ±</a></div>
-			<div class="footinfo" style="padding-left: 60px;"><a href="" target="">¾Ù±¨²»Á¼ÐÅÏ¢</a></div>
+			<div class="footinfo" style="padding-left: 100px;"><a href="" target="">å¼€å‘äººå‘˜</a></div>
+			<div class="footinfo" style="padding-left: 60px;"><a href="" target="">ä¸¾æŠ¥ä¸è‰¯ä¿¡æ¯</a></div>
 	 	</div>
 		
 	 </div>
@@ -59,3 +60,4 @@
 
     </body>
 </html>
+

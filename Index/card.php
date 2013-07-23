@@ -3,15 +3,13 @@ error_reporting(0);
 
 $conn = mysql_connect("localhost","root","root");
 if (!$conn){
-	die("Á¬½ÓÊı¾İ¿âÊ§°Ü£º" . mysql_error());
+	die("è¿æ¥æ•°æ®åº“å¤±è´¥ï¼š" . mysql_error());
 }
 
 mysql_select_db("mingpiantest", $conn);
 
-mysql_query("SET NAMES gbk");
-
 $timezone="Asia/Shanghai";
-date_default_timezone_set($timezone);//´óÖĞ»ªÊ±¼ä
+date_default_timezone_set($timezone);//å¤§ä¸­åæ—¶é—´
 
 $category_id = $_GET['category_id'];
 if(!isset($category_id)){

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2013 年 07 月 09 日 09:27
+-- 生成日期: 2013 年 07 月 23 日 09:55
 -- 服务器版本: 5.5.24-log
 -- PHP 版本: 5.4.3
 
@@ -19,8 +19,35 @@ SET time_zone = "+00:00";
 --
 -- 数据库: `mingpiantest`
 --
-CREATE DATABASE IF NOT EXISTS `mingpiantest` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+CREATE DATABASE IF NOT EXISTS `mingpiantest` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `mingpiantest`;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `area`
+--
+
+CREATE TABLE IF NOT EXISTS `area` (
+  `areaid` int(4) NOT NULL AUTO_INCREMENT,
+  `name` text CHARACTER SET utf8 NOT NULL,
+  PRIMARY KEY (`areaid`),
+  UNIQUE KEY `areaid` (`areaid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+
+--
+-- 转存表中的数据 `area`
+--
+
+INSERT INTO `area` (`areaid`, `name`) VALUES
+(1, '涧西区'),
+(2, '西工区'),
+(3, '老城区'),
+(4, '瀍河区'),
+(5, '洛龙区'),
+(6, '高新技术开发区'),
+(7, '伊滨区'),
+(8, '吉利区');
 
 -- --------------------------------------------------------
 
@@ -28,7 +55,6 @@ USE `mingpiantest`;
 -- 表的结构 `categories`
 --
 
-DROP TABLE IF EXISTS `categories`;
 CREATE TABLE IF NOT EXISTS `categories` (
   `id` int(16) NOT NULL AUTO_INCREMENT,
   `name` text CHARACTER SET utf8 NOT NULL,
@@ -73,7 +99,6 @@ INSERT INTO `categories` (`id`, `name`, `level`, `parent_id`) VALUES
 -- 表的结构 `categories_level`
 --
 
-DROP TABLE IF EXISTS `categories_level`;
 CREATE TABLE IF NOT EXISTS `categories_level` (
   `level_name` text CHARACTER SET utf8 NOT NULL,
   `categories_level` int(4) NOT NULL,
@@ -94,7 +119,6 @@ INSERT INTO `categories_level` (`level_name`, `categories_level`) VALUES
 -- 表的结构 `mingpian_card`
 --
 
-DROP TABLE IF EXISTS `mingpian_card`;
 CREATE TABLE IF NOT EXISTS `mingpian_card` (
   `cardid` int(4) NOT NULL AUTO_INCREMENT,
   `name` text NOT NULL,
@@ -105,28 +129,29 @@ CREATE TABLE IF NOT EXISTS `mingpian_card` (
   `age` int(4) NOT NULL,
   `addtime` datetime NOT NULL,
   `comments` text NOT NULL,
+  `picfile` text NOT NULL,
   PRIMARY KEY (`cardid`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=38 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=61 ;
 
 --
 -- 转存表中的数据 `mingpian_card`
 --
 
-INSERT INTO `mingpian_card` (`cardid`, `name`, `keyword`, `job`, `company`, `tel`, `age`, `addtime`, `comments`) VALUES
-(36, 'AA', '', 'AA', 'AA', 'AA', 0, '0000-00-00 00:00:00', ''),
-(34, 'T', 'TV/LCD/PC/Notebook/Projector/MobileT', 'TT', 'T', 'T', 0, '2013-06-09 11:50:46', 'T'),
-(31, 'W', 'W', 'W', 'W', 'W', 0, '2013-06-09 11:50:28', 'W'),
-(32, 'E', 'E', 'E', 'E', 'E', 0, '2013-06-09 11:50:35', 'E'),
-(30, 'Q', 'Q', 'Q', 'Q', 'Q', 0, '2013-06-09 11:50:23', 'Q'),
-(29, '李勇', '', '世界上最伟大的推销员', '保健品公司', '1', 0, '2013-06-09 11:46:15', '1'),
-(27, '李力', '', '帮老陈删贴不让老陈查水表', 'JRS', '1', 0, '2013-06-09 11:44:53', '1'),
-(26, '晓飞', '', '女汉子', '女汉子程序员星人', '1', 0, '2013-06-09 11:44:13', '1'),
-(25, '文龙', '', '子龙二弟', '蜀', '1', 0, '2013-06-09 11:44:02', '1'),
-(24, '战国', '', '公元前220代表人物', '被秦始皇一统江湖', '1', 0, '2013-06-09 11:43:47', '1'),
-(23, '宝玉', '', '红楼后史传人', '曹雪芹家谱', '1', 0, '2013-06-09 11:43:22', '1'),
-(22, '老陈', '', '专业吐槽', '邻居查水表送快递爆破专业能手', '1', 0, '2013-06-09 11:42:56', '1'),
-(35, 'Y', 'Y', 'Y', 'Y', 'Y', 0, '2013-06-09 11:50:52', 'Y'),
-(37, '1', '', '1', '1', '110', 0, '2013-07-09 09:21:39', '');
+INSERT INTO `mingpian_card` (`cardid`, `name`, `keyword`, `job`, `company`, `tel`, `age`, `addtime`, `comments`, `picfile`) VALUES
+(36, 'AA', '', 'AA', 'AA', 'AA', 0, '0000-00-00 00:00:00', '', ''),
+(34, 'T', 'TV/LCD/PC/Notebook/Projector/MobileT', 'TT', 'T', 'T', 0, '2013-06-09 11:50:46', 'T', ''),
+(31, 'W', 'W', 'W', 'W', 'W', 0, '2013-06-09 11:50:28', 'W', ''),
+(32, 'E', 'E', 'E', 'E', 'E', 0, '2013-06-09 11:50:35', 'E', ''),
+(30, 'Q', 'Q', 'Q', 'Q', 'Q', 0, '2013-06-09 11:50:23', 'Q', ''),
+(29, '李勇', '', '世界上最伟大的推销员', '保健品公司', '1', 0, '2013-06-09 11:46:15', '1', ''),
+(27, '李力', '', '帮老陈删贴不让老陈查水表', 'JRS', '1', 0, '2013-06-09 11:44:53', '1', ''),
+(26, '晓飞', '', '女汉子', '女汉子程序员星人', '1', 0, '2013-06-09 11:44:13', '1', ''),
+(25, '文龙', '', '子龙二弟', '蜀', '1', 0, '2013-06-09 11:44:02', '1', ''),
+(24, '战国', '', '公元前220代表人物', '被秦始皇一统江湖', '1', 0, '2013-06-09 11:43:47', '1', ''),
+(23, '宝玉', '', '红楼后史传人', '曹雪芹家谱', '1', 0, '2013-06-09 11:43:22', '1', ''),
+(22, '老陈', '', '专业吐槽', '邻居查水表送快递爆破专业能手', '1', 0, '2013-06-09 11:42:56', '1', ''),
+(60, 'wang', '', '', '', '', 0, '0000-00-00 00:00:00', '', '../upload/1374137347.jpg'),
+(59, '', '', '', '', '', 0, '0000-00-00 00:00:00', '', '../upload/1374117858.jpg');
 
 -- --------------------------------------------------------
 
@@ -134,7 +159,6 @@ INSERT INTO `mingpian_card` (`cardid`, `name`, `keyword`, `job`, `company`, `tel
 -- 表的结构 `mingpian_users`
 --
 
-DROP TABLE IF EXISTS `mingpian_users`;
 CREATE TABLE IF NOT EXISTS `mingpian_users` (
   `user_id` int(4) NOT NULL AUTO_INCREMENT,
   `username` varchar(64) NOT NULL,
@@ -143,7 +167,7 @@ CREATE TABLE IF NOT EXISTS `mingpian_users` (
   `permission` int(4) NOT NULL,
   `operator` text NOT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
 
 --
 -- 转存表中的数据 `mingpian_users`
@@ -153,7 +177,8 @@ INSERT INTO `mingpian_users` (`user_id`, `username`, `password`, `regdate`, `per
 (1, 'admin', 'admin', '0000-00-00 00:00:00', 1, ''),
 (2, 'laperte', 'laperte', '0000-00-00 00:00:00', 2, ''),
 (13, 'test', '123456', '2013-06-08 16:12:26', 0, ''),
-(12, 'yaoniming123', 'yaoniming123', '2013-06-07 14:28:18', 3, '');
+(12, 'yaoniming123', 'yaoniming123', '2013-06-07 14:28:18', 3, ''),
+(14, 'armani', '1234234', '2013-07-10 12:05:57', 4, 'admin');
 
 -- --------------------------------------------------------
 
@@ -161,7 +186,6 @@ INSERT INTO `mingpian_users` (`user_id`, `username`, `password`, `regdate`, `per
 -- 表的结构 `weibo`
 --
 
-DROP TABLE IF EXISTS `weibo`;
 CREATE TABLE IF NOT EXISTS `weibo` (
   `weibo_id` int(128) DEFAULT NULL,
   `weibo_url` longtext CHARACTER SET utf8,
@@ -831,7 +855,8 @@ INSERT INTO `weibo` (`weibo_id`, `weibo_url`, `name`, `verified`, `info`, `compa
 (1061143291, 'weibo.com/77932533', 'Mr-九歌', '', '孤单是一个人的狂欢，狂欢是一群人的孤单', '幸福调味 ', '  容易找的我 ', ' file/1061143291.jpg', 0),
 (1009810802, 'weibo.com/u/1009810802', '星期七1993', '', '现在骂我的人，那是他们不了解我；等他们了解我了，嘿嘿，就会打我了！', '', '  还年轻挺好的 挖挖挖挖挖鼻屎 DavidBeckham 冷粉控 1993本土制造 薛之谦 足球 ', ' file/1009810802.jpg', 0),
 (1004332862, 'weibo.com/u/1004332862', '雌狒狒', '', '男女就是有别啊！举双手，我服！', '', '', ' file/1004332862.jpg', 0),
-(1018835725, 'weibo.com/u/1018835725', '迷失D天空', '', '要有光,要有诚', '', '  自由 ', ' file/1018835725.jpg', 0);
+(1018835725, 'weibo.com/u/1018835725', '迷失D天空', '', '要有光,要有诚', '', '  自由 ', ' file/1018835725.jpg', 0),
+(0, NULL, 'QQ ', 'QQ', '', NULL, NULL, '../upload/1374202016.jpg', 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -1,8 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
-<title>Top À¸</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Top æ </title>
 <link rel="stylesheet" type="text/css" href="../public/css/index.css">
 </head>
 
@@ -11,19 +11,19 @@
 		<div class="top_left_3">&nbsp;</div>
 		<div class="top_left"><a href="../index.php" target="_parent"><img src="../Public/image/font-88.png" width="100%"/></a></div>
 		<div class="top_left_1">&nbsp;</div>
-		<div class="top_middle"><a href="" target="">´´½¨:</a>  &nbsp;&nbsp; <a href="">ÃûÆ¬</a>  |  <a href="../app/say/index.php" target="_parent">»°Ìâ</a>  |  <a href="">µãÆÀ</a>  |  <a href="">È¦×Ó</a></div>		
+		<div class="top_middle"><a href="" target="">åˆ›å»º:</a>  &nbsp;&nbsp; <a href="">åç‰‡</a>  |  <a href="../app/say/index.php" target="_parent">è¯é¢˜</a>  |  <a href="">ç‚¹è¯„</a>  |  <a href="">åœˆå­</a></div>		
 		<?php
 		session_start();
 		if(isset($_SESSION['username']))
 		{
 		echo '<div class="top_middle_1" style="width:200px">&nbsp;</div>';
-		echo '<div class="top_right" style="width:300px"><a href="">ÏûÏ¢</a> &nbsp;&nbsp;<a href="left_my.php" target="left">ÎÒµÄ¶¯Ì¬</a> &nbsp;&nbsp;<a href="">ÉèÖÃ</a>&nbsp;&nbsp;&nbsp;<a href="../Admin/admin.php" target="_parent">ºóÌ¨</a></div>';
+		echo '<div class="top_right" style="width:300px"><a href="">æ¶ˆæ¯</a> &nbsp;&nbsp;<a href="left_my.php" target="left">æˆ‘çš„åŠ¨æ€</a> &nbsp;&nbsp;<a href="">è®¾ç½®</a>&nbsp;&nbsp;&nbsp;<a href="../Admin/admin.php" target="_parent">åå°</a></div>';
 		}
 		
 		else 
 		{
 		echo '<div class="top_middle_1">&nbsp;</div>';
-		echo '<div class="top_right"><a href="../Admin/reg.php" target="../index.html">×¢²á</a> &nbsp;&nbsp;<a href="../Admin/login.php" target="_parent">µÇÂ¼</a> &nbsp;&nbsp;</div>';
+		echo '<div class="top_right"><a href="../Admin/reg.php" target="../index.html">æ³¨å†Œ</a> &nbsp;&nbsp;<a href="../Admin/login.php" target="_parent">ç™»å½•</a> &nbsp;&nbsp;</div>';
 		}
 		?>
 	</div>

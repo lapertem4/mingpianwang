@@ -1,8 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
-<title>��ർ��</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>左侧导航</title>
 <script src="../Public/js/prototype.lite.js" type="text/javascript"></script>
 <script src="../Public/js/moo.fx.js" type="text/javascript"></script>
 <script src="../Public/js/moo.fx.pack.js" type="text/javascript"></script>
@@ -157,27 +157,27 @@ H1 a {
 		</div>
 		<div class="menu_detail_total" style="height: 200px;">
 			<div class="menu_detail">
-				<H1 class="title"><A href="javascript:void(0)">+ ��Ƭ</a></H1>
+				<H1 class="title"><A href="javascript:void(0)">+ 名片</a></H1>
 				<div class="content">
-					<a href="" target="">ȫ���ɼ�</a><br />
-					<a href="" target="">Ȧ�ӷ���</a><br />
-					<a href="" target="">�ҵ���Ƭ</a>
+					<a href="" target="">全部可见</a><br />
+					<a href="" target="">圈子分享</a><br />
+					<a href="" target="">我的名片</a>
 				</div>
-				<H1 class="title"><A href="javascript:void(0)">+ ����</a></H1>
+				<H1 class="title"><A href="javascript:void(0)">+ 点评</a></H1>
 				<div class="content">
-					<a href="" target="">�ҵ�����</a><br />
-					<a href="" target="">�Ҳ����</a><br />
-					<a href="" target="">�ظ��ҵ�</a>
+					<a href="" target="">我的主题</a><br />
+					<a href="" target="">我参与的</a><br />
+					<a href="" target="">回复我的</a>
 				</div>
-				<H1 class="title"><A href="javascript:void(0)">+ �ҵ�Ȧ��</a></H1>
+				<H1 class="title"><A href="javascript:void(0)">+ 我的圈子</a></H1>
 				<div class="content">
-				  	<a href="" target="">װ��Ȧ</a><br />
-					<a href="" target="">���о��ֲ�</a>
+				  	<a href="" target="">装修圈</a><br />
+					<a href="" target="">骑行俱乐部</a>
 				</div>
-				<H1 class="title"><a href="javascript:void(0)">+ �ҵĺ���</a></H1>
+				<H1 class="title"><a href="javascript:void(0)">+ 我的好友</a></H1>
 				<div class="content">
-					<a href="" target="">һ�����ѽ�S</a><br />
-					<a href="" target="">һ����ƽ�B</a>
+					<a href="" target="">一个朋友叫S</a><br />
+					<a href="" target="">一个伙计叫B</a>
 				</div>
 			</div>
 		</div>
@@ -187,15 +187,15 @@ H1 a {
 				<tbody>
 					<tr height="10">
 						<td width="20"><img src="../Public/image/font-72.png" style="height: 25px;"></td>
-						<td><a href="" target="">�Ƽ�����</a></td>
+						<td><a href="" target="">推荐有礼</a></td>
 					</tr>
 					<tr>
 						<td width="20"><img src="../Public/image/font-307.png" style="height: 25px;"></td>
-						<td><a href="" target="">���������</a></td>
+						<td><a href="" target="">便民服务箱</a></td>
 					</tr>
 					<tr>
 						<td width="20"><img src="../Public/image/font-261.png" style="height: 25px;"></td>
-						<td><a href="" target="">��������</a></td>
+						<td><a href="" target="">关于我们</a></td>
 					</tr>
 					<tr>
 						<td width="20"><img src="../Public/image/font-349.png" style="height: 25px;"></td>

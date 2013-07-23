@@ -4,7 +4,7 @@ include_once "conn.php";
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <style>
 body {
     font-size:10px;
@@ -34,12 +34,12 @@ session_start();
     $sql = "INSERT INTO mingpian_users (username, password, permission, regdate, operator) VALUES ('$name','$pwd','$auth','$time','$op')";
    if(mysql_query($sql,$conn))
     {
-        exit($name.'Ìí¼Ó³É¹¦!');
+        exit($name.'æ·»åŠ æˆåŠŸ!');
     }
    else
    {
      echo mysql_error();
-     exit('Ìí¼ÓÊ§°Ü!');
+     exit('æ·»åŠ å¤±è´¥!');
    } 
   }
 ?>
@@ -48,10 +48,10 @@ session_start();
     <form id="useradd" name="useradd" method="post" action="" enctype="multipart/form-data" onsubmit="return checkform()">
       <table width="100%" border="0" align="center" cellspacing="1" class="table">
         <tr bgcolor="#FFFFFF" height="25">
-          <th height="25" colspan="2" align="left">&nbsp;Ìí¼ÓÓÃ»§</th>
+          <th height="25" colspan="2" align="left">&nbsp;æ·»åŠ ç”¨æˆ·</th>
         </tr>
         <tr bgcolor="#FFFFFF" height="25">
-          <td width="355" height="25" align="right">ÕÊºÅ£º</td>
+          <td width="355" height="25" align="right">å¸å·ï¼š</td>
           <td width="919" align="left">
         <label>
             <input name="name" type="text" id="name" size="20" />
@@ -59,7 +59,7 @@ session_start();
         </tr>
 
         <tr bgcolor="#FFFFFF" height="25">
-          <td width="355" height="25" align="right">¿ÚÁî£º</td>
+          <td width="355" height="25" align="right">å£ä»¤ï¼š</td>
           <td width="919" align="left">
         <label>
             <input name="pwd" type="text" id="pwd" size="20" />
@@ -67,7 +67,7 @@ session_start();
         </tr>
 
         <tr bgcolor="#FFFFFF" height="25">
-          <td width="355" height="25" align="right">È¨ÏŞ·ÖÅä£º</td>
+          <td width="355" height="25" align="right">æƒé™åˆ†é…ï¼š</td>
           <td width="919" align="left">
         <label>
             <input name="auth" type="int" id="auth" size="5" />
@@ -78,10 +78,10 @@ session_start();
           <td width="355" height="25" align="right"></td>
             <td width="919" align="left">
                 <label>
-                <input type="submit" name="submit" value="Ìá½»" />
+                <input type="submit" name="submit" value="æäº¤" />
                 </label>
                 <label>
-                <input type="reset" name="reset" value="ÖØÖÃ" />
+                <input type="reset" name="reset" value="é‡ç½®" />
                 </label>
             </td>      
         </tr>
@@ -90,23 +90,23 @@ session_start();
     <div class='admininfo'>
     <table width='200' height='125' bgcolor="#003F7D" cellpadding="8" cellspacing="1">
         <tr bgcolor="#FFFFFF" height="25">
-            <th>ÕË»§È¨ÏŞËµÃ÷</th>
+            <th>è´¦æˆ·æƒé™è¯´æ˜</th>
             <th></th>
         </tr>
         <tr bgcolor="#FFFFFF" height="25">
-            <td>root¹ÜÀíÔ±</td>
+            <td>rootç®¡ç†å‘˜</td>
             <td>1</td>
         </tr>
         <tr bgcolor="#FFFFFF" height="25">
-            <td>ÆÕÍ¨¹ÜÀíÔ±</td>
+            <td>æ™®é€šç®¡ç†å‘˜</td>
             <td>2</td>
         </tr>
         <tr bgcolor="#FFFFFF" height="25">
-            <td>À¸Ä¿¹ÜÀíÔ±</td>
+            <td>æ ç›®ç®¡ç†å‘˜</td>
             <td>3</td>
         </tr>
         <tr bgcolor="#FFFFFF" height="25">
-            <td>ÆÕÍ¨ÓÃ»§</td>
+            <td>æ™®é€šç”¨æˆ·</td>
             <td>4</td>
         </tr>
     </table>

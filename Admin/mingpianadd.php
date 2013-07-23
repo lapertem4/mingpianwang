@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <style type="text/css">
 body {font-size:10px;color: #003F7D;}
 a, a:visited, a:hover, a:active { text-decoration: none; color: inherit; }
@@ -20,30 +20,30 @@ a, a:visited, a:hover, a:active { text-decoration: none; color: inherit; }
 </style>
 <!--
 <script language="javascript">
-  //DOMÊ÷
+  //DOMæ ‘
   function checkform()
   {
     if(document.forms["cardadd"].elements["cardname"].value=="")
     {
-      alert("±§Ç¸ÇëÁôÏÂÄúµÄ´óÃû");
+      alert("æŠ±æ­‰è¯·ç•™ä¸‹æ‚¨çš„å¤§å");
       document.forms["cardadd"].elements["cardname"].focus();
       return false;
     }
     if(document.forms["cardadd"].elements["job"].value=="")
     {
-      alert("ÇëÌîĞ´ÄúÌá¹©µÄÖ°Òµ");
+      alert("è¯·å¡«å†™æ‚¨æä¾›çš„èŒä¸š");
       document.forms["cardadd"].elements["job"].focus();
       return false;
     }
     if(document.forms["cardadd"].elements["company"].value=="")
     {
-      alert("ÄúµÄ¹«Ë¾ÄØ:\)");
+      alert("æ‚¨çš„å…¬å¸å‘¢:\)");
       document.forms["cardadd"].elements["company"].focus();
       return false;
     }
     if(document.forms["cardadd"].elements["tel"].value=="")
     {
-      alert("×ÜµÃÓĞÁªÏµ·½Ê½ÄÜÕÒµ½Äú°É");
+      alert("æ€»å¾—æœ‰è”ç³»æ–¹å¼èƒ½æ‰¾åˆ°æ‚¨å§");
       document.forms["cardadd"].elements["tel"].focus();
       return false;
     }
@@ -55,55 +55,55 @@ a, a:visited, a:hover, a:active { text-decoration: none; color: inherit; }
 <script type="text/javascript" src="../public/js/jquery.form.js"></script>
 <script type="text/javascript">
 $(function () {
-	var bar = $('.bar');
-	var percent = $('.percent');
-	var showimg = $('#showimg');
-	var progress = $(".progress");
-	var files = $(".files");
-	var btn = $(".btn span");
-	$("#fileupload").wrap("<form id='myupload' action='uploadpic.php' method='post' enctype='multipart/form-data'></form>");
+  var bar = $('.bar');
+  var percent = $('.percent');
+  var showimg = $('#showimg');
+  var progress = $(".progress");
+  var files = $(".files");
+  var btn = $(".btn span");
+  $("#fileupload").wrap("<form id='myupload' action='uploadpic.php' method='post' enctype='multipart/form-data'></form>");
     $("#fileupload").change(function(){
-		$("#myupload").ajaxSubmit({
-			dataType:  'json',
-			beforeSend: function() {
-        		showimg.empty();
+    $("#myupload").ajaxSubmit({
+      dataType:  'json',
+      beforeSend: function() {
+            showimg.empty();
                         progress.show();
-        		var percentVal = '0%';
-        		bar.width(percentVal);
-        		percent.html(percentVal);
-                        btn.html("ÉÏ´«ÖĞ...");
-    		},
-    		uploadProgress: function(event, position, total, percentComplete) {
-        		var percentVal = percentComplete + '%';
-        		bar.width(percentVal);
-        		percent.html(percentVal);
-    		},
-			success: function(data) {
-				files.html(data.name+"("+data.size+"k) <span class='delimg' rel='"+data.pic+"'>É¾³ı</span>");
-				var img = "../upload/"+data.pic;
-				showimg.html("<img src="+img+" >");
-				btn.html("ÉÏ´«Í·Ïñ");
-			},
-			error:function(xhr){
-				btn.html("ÉÏ´«Ê§°Ü");
-				bar.width('0')
-				files.html(xhr.responseText);
-			}
-		});
-	});
-	
-	$(".delimg").live('click',function(){
-		var pic = $(this).attr("rel");
-		$.post("uploadpic.php?act=delimg",{imagename:pic},function(msg){
-			if(msg==1){
-				files.html("É¾³ı³É¹¦.");
-				showimg.empty();
-				progress.hide();
-			}else{
-				alert(msg);
-			}
-		});
-	});
+            var percentVal = '0%';
+            bar.width(percentVal);
+            percent.html(percentVal);
+                        btn.html("ä¸Šä¼ ä¸­...");
+        },
+        uploadProgress: function(event, position, total, percentComplete) {
+            var percentVal = percentComplete + '%';
+            bar.width(percentVal);
+            percent.html(percentVal);
+        },
+      success: function(data) {
+        files.html(data.name+"("+data.size+"k) <span class='delimg' rel='"+data.pic+"'>åˆ é™¤</span>");
+        var img = "../upload/"+data.pic;
+        showimg.html("<img src="+img+" >");
+        btn.html("ä¸Šä¼ å¤´åƒ");
+      },
+      error:function(xhr){
+        btn.html("ä¸Šä¼ å¤±è´¥");
+        bar.width('0')
+        files.html(xhr.responseText);
+      }
+    });
+  });
+  
+  $(".delimg").live('click',function(){
+    var pic = $(this).attr("rel");
+    $.post("uploadpic.php?act=delimg",{imagename:pic},function(msg){
+      if(msg==1){
+        files.html("åˆ é™¤æˆåŠŸ.");
+        showimg.empty();
+        progress.hide();
+      }else{
+        alert(msg);
+      }
+    });
+  });
 });
 </script>
 
@@ -128,12 +128,12 @@ include_once "conn.php";
             VALUES ('$cardname','$keyword','$job','$company','$tel','$age','$adddate','$comment','$picfile')";
    if(mysql_query($sql,$conn))
     {
-        exit('Ìí¼Ó³É¹¦!');
+        exit('æ·»åŠ æˆåŠŸ!');
     }
    else
    {
      echo mysql_error();
-     exit('Ìí¼ÓÊ§°Ü!');
+     exit('æ·»åŠ å¤±è´¥!');
    } 
   }
 ?>
@@ -143,9 +143,9 @@ include_once "conn.php";
 <form enctype="multipart/form-data" id="cardadd" name="cardadd" method="post" action="" onsubmit="return checkform()">
         <div id="main">
             <div class="upload">
-                 <p>ËµÃ÷£ºÊ¾ÀıÖĞÖ»ÔÊĞíÉÏ´«gif/jpg¸ñÊ½µÄÍ¼Æ¬£¬Í¼Æ¬´óĞ¡²»ÄÜ³¬¹ı500k¡£</p>
+                 <p>è¯´æ˜ï¼šç¤ºä¾‹ä¸­åªå…è®¸ä¸Šä¼ gif/jpgæ ¼å¼çš„å›¾ç‰‡ï¼Œå›¾ç‰‡å¤§å°ä¸èƒ½è¶…è¿‡500kã€‚</p>
                  <div class="btn">
-                 <span>ÉÏ´«Í·Ïñ</span>
+                 <span>ä¸Šä¼ å¤´åƒ</span>
                  <input id="fileupload" type="file" name="mypic">
                  </div>
                  <div class="progress">
@@ -159,33 +159,33 @@ include_once "conn.php";
 
   <table width="100%" border="0" align="center" cellspacing="1" >
     <tr>
-      <td width="355" height="25" align="right">¶¦¶¦´óÃû£º</td>
+      <td width="355" height="25" align="right">é¼é¼å¤§åï¼š</td>
       <td width="919" align="left"><input name="cardname" type="text" id="cardname" size="15" /></td>
     </tr>
     <tr bordercolor="#000000" bgcolor="#cccccc">
-      <td align="right" bgcolor="#FFFFFF" >¹Ø¼ü´Ê£º</td>
-      <td bgcolor="#FFFFFF" ><input name="keyword" type="text" id="keywords" size="50" />(Ñ¡Ìî)</td>
+      <td align="right" bgcolor="#FFFFFF" >å…³é”®è¯ï¼š</td>
+      <td bgcolor="#FFFFFF" ><input name="keyword" type="text" id="keywords" size="50" />(é€‰å¡«)</td>
     </tr>
     <tr bordercolor="#000000" bgcolor="#cccccc">
-      <td align="right" bgcolor="#FFFFFF" >ÄúµÄÍ·ÏÎ£º</td>
+      <td align="right" bgcolor="#FFFFFF" >æ‚¨çš„å¤´è¡”ï¼š</td>
       <td bgcolor="#FFFFFF" ><input name="job" type="text" id="job" size="50" />
        </td>
     </tr>
     <tr bordercolor="#000000" bgcolor="#cccccc">
-      <td align="right" bgcolor="#FFFFFF" >ÄúËùÔÚ¹«Ë¾£º</td>
+      <td align="right" bgcolor="#FFFFFF" >æ‚¨æ‰€åœ¨å…¬å¸ï¼š</td>
       <td bgcolor="#FFFFFF" ><input name="company" type="text" id="company" size="50" />
        </td>
     </tr>
     <tr>
-      <td width="355" height="25" align="right">ÁªÏµ·½Ê½£º</td>
+      <td width="355" height="25" align="right">è”ç³»æ–¹å¼ï¼š</td>
       <td width="919" align="left"><input name="tel" type="text" id="tel" size="20" /></td>
     </tr>
     <tr bordercolor="#000000" bgcolor="#cccccc">
-      <td align="right" bgcolor="#FFFFFF" >ÄúµÄÄêÁä£º</td>
-      <td bgcolor="#FFFFFF" ><input name="age" type="text" id="age" size="5" />(Ñ¡Ìîµ«ÊÇ»áÔö¼ÓÄúµÄµÃ·Ö)</td>
+      <td align="right" bgcolor="#FFFFFF" >æ‚¨çš„å¹´é¾„ï¼š</td>
+      <td bgcolor="#FFFFFF" ><input name="age" type="text" id="age" size="5" />(é€‰å¡«ä½†æ˜¯ä¼šå¢åŠ æ‚¨çš„å¾—åˆ†)</td>
     </tr>
     <tr>
-      <td align="right" >¼òÒª½éÉÜ£º</td>
+      <td align="right" >ç®€è¦ä»‹ç»ï¼š</td>
       <td align="left" ><textarea name="comment" id="comment" rows="10" cols="45" sytle="resize:none;"></textarea>
    </td>
     </tr>
@@ -194,7 +194,7 @@ include_once "conn.php";
     </tr>
     <tr>
       <td colspan="2" align="center" >
-        <input type="submit" name="submit" value="×¢²á" />
+        <input type="submit" name="submit" value="æ³¨å†Œ" />
       </td>
     </tr>
   </table>

@@ -1,8 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
-<title>ÄÚÈİ</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>å†…å®¹</title>
 <style type="text/css">
 a, a:visited, a:hover, a:active { text-decoration: none; color: inherit; }
 
@@ -17,8 +17,8 @@ body p {
 
 <body>
     <p>
-    Á¼ĞÔ»ã¾Û£¬ÕÒµ½ÓÃ»§×îĞèÒªµÄ·şÎñ¡£</br></br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;------ÃûÆ¬Íø
+    è‰¯æ€§æ±‡èšï¼Œæ‰¾åˆ°ç”¨æˆ·æœ€éœ€è¦çš„æœåŠ¡ã€‚</br></br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;------åç‰‡ç½‘
     </p>
 </body>
 </html>

@@ -1,8 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-<title>ÃûÆ¬ÏêÇéÒ³</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>åç‰‡è¯¦æƒ…é¡µ</title>
 <link rel="stylesheet" type="text/css" href="../public/css/index.css">
 <style type="text/css">
 
@@ -23,15 +23,11 @@
 
 		<div class="top_left_2">&nbsp;</div>
 		
-<<<<<<< HEAD
-		<div class="top_middle"><a href="" target="">´´½¨:</a>  &nbsp;&nbsp; <a href="index.html" target="_parent">ÃûÆ¬</a>  |  <a href="../app/say/index.php">»°Ìâ</a>  |  <a href="">µãÆÀ</a>  |  <a href="">È¦×Ó</a></div>
-=======
-		<div class="top_middle"><a href="" target="">´´½¨:</a>  &nbsp;&nbsp; <a href="">ÃûÆ¬</a>  |  <a href="">»°Ìâ</a>  |  <a href="">µãÆÀ</a>  |  <a href="">È¦×Ó</a></div>
->>>>>>> f8dee2fd2b00c7dca6ad46e081f922f5c69730e4
+		<div class="top_middle"><a href="" target="">åˆ›å»º:</a>  &nbsp;&nbsp; <a href="index.html" target="_parent">åç‰‡</a>  |  <a href="../app/say/index.php">è¯é¢˜</a>  |  <a href="">ç‚¹è¯„</a>  |  <a href="">åœˆå­</a></div>
 
 		<div class="top_middle_2">&nbsp;</div>
 		
-		<div class="top_right_1"><a href="../Admin/reg.html" target="../index.html">×¢²á</a> &nbsp;&nbsp;<a href="../Admin/index.html" target="_parent">µÇÂ¼</a> &nbsp;&nbsp;</div>
+		<div class="top_right_1"><a href="../Admin/reg.html" target="../index.html">æ³¨å†Œ</a> &nbsp;&nbsp;<a href="../Admin/index.html" target="_parent">ç™»å½•</a> &nbsp;&nbsp;</div>
 	</div>
 </div>
 <?php
@@ -59,22 +55,22 @@ $file = '../'.trim($data['file']);
 					<table cellpadding="0" border="0" cellspacing="0">
 						<tr height="35px">
 							<td>
-                                                            ĞÕÃû:<?php echo $data['name'];?>
+                                                            å§“å:<?php echo $data['name'];?>
                           </td>
 						</tr>
 						<tr height="35px">
 							<td>
-                                                            µç»°:<?php echo $pageid; ?>
+                                                            ç”µè¯:<?php echo $pageid; ?>
                           </td>
 						</tr>
 						<tr height="35px">
 							<td>
-                                                            Éí·İ:<?php echo $data['verified'];?>
+                                                            èº«ä»½:<?php echo $data['verified'];?>
                           </td>
 						</tr>
 						<tr height="35px">
 							<td>
-                                                            ¹«Ë¾:<?php echo $data['company'];?>
+                                                            å…¬å¸:<?php echo $data['company'];?>
                           </td>
 						</tr>
 					</table>
@@ -94,11 +90,11 @@ $file = '../'.trim($data['file']);
 		</div>
 	 	<div class="content_middle">
    		 	<div class="service_price">
-				<div class="service_price_title">&nbsp;&nbsp;·şÎñ¼ÛÄ¿±í</div>
+				<div class="service_price_title">&nbsp;&nbsp;æœåŠ¡ä»·ç›®è¡¨</div>
 				<div class="service_price_content"></div>
 			</div>
 			<div class="dynamic_news">
-				<div class="service_price_title">&nbsp;&nbsp;·şÎñ¶¯Ì¬</div>
+				<div class="service_price_title">&nbsp;&nbsp;æœåŠ¡åŠ¨æ€</div>
 				<div class="dynamic_news_content"></div>
 			</div>
 		</div>
@@ -106,10 +102,10 @@ $file = '../'.trim($data['file']);
 		<div class="content_right">
 			<div id="comment_type">
 				<ul>
-					<li style="border-right: 1px solid #5b7e91; "><a href="javascript:;" onmouseover="show(0)" class="over">È«²¿</a></li>
-					<li style="border-right: 1px solid #5b7e91;"><a href="javascript:;" onmouseover="show(1)" >ºÃÆÀ</a></li>
-					<li style="border-right: 1px solid #5b7e91;"><a href="javascript:;" onmouseover="show(2)" >ÖĞÆÀ</a></li>
-					<li><a href="javascript:;" onmouseover="show(3)" >²îÆÀ</a></li>
+					<li style="border-right: 1px solid #5b7e91; "><a href="javascript:;" onmouseover="show(0)" class="over">å…¨éƒ¨</a></li>
+					<li style="border-right: 1px solid #5b7e91;"><a href="javascript:;" onmouseover="show(1)" >å¥½è¯„</a></li>
+					<li style="border-right: 1px solid #5b7e91;"><a href="javascript:;" onmouseover="show(2)" >ä¸­è¯„</a></li>
+					<li><a href="javascript:;" onmouseover="show(3)" >å·®è¯„</a></li>
 				</ul>
 			</div>
 			<div id="comment_content">
@@ -122,22 +118,22 @@ $file = '../'.trim($data['file']);
 	</div>
 
 	<div class="foot">
-		<div class="footinfo" style="padding-left: 20px;"><a href="" target="">ÃâÔğÉùÃ÷</a></div>
-		<div class="footinfo" style="padding-left: 60px;"><a href="" target="">Ê¹ÓÃÌõ¿î</a></div>
+		<div class="footinfo" style="padding-left: 20px;"><a href="" target="">å…è´£å£°æ˜</a></div>
+		<div class="footinfo" style="padding-left: 60px;"><a href="" target="">ä½¿ç”¨æ¡æ¬¾</a></div>
 		<div class="footinfo" style="padding-left: 125px;">copy right 2013 - 2016 reserved</div>
-		<div class="footinfo" style="padding-left: 80px;"><a href="" target="">¿ª·¢ÈËÔ±</a></div>
-		<div class="footinfo" style="padding-left: 60px;"><a href="" target="">¾Ù±¨²»Á¼ĞÅÏ¢</a></div>
+		<div class="footinfo" style="padding-left: 80px;"><a href="" target="">å¼€å‘äººå‘˜</a></div>
+		<div class="footinfo" style="padding-left: 60px;"><a href="" target="">ä¸¾æŠ¥ä¸è‰¯ä¿¡æ¯</a></div>
 	</div>
 
 	<div class="scroll">
 		<div class="scroll_ask">
 			<div sytle="right:0px; opacity:0; display:block;">
-				<a class="scrollpanel_ask">ÔÚÏß°ïÖú</a>
+				<a class="scrollpanel_ask">åœ¨çº¿å¸®åŠ©</a>
 			</div>
 		</div>
 		<div class="scroll_top">
 			<div sytle="right:0px; opacity:0; display:block;">
-				<a class="scrollpanel_top">·µ»ØÖÃ¶¥</a>
+				<a class="scrollpanel_top">è¿”å›ç½®é¡¶</a>
 			</div>
 		</div>
 	</div> 

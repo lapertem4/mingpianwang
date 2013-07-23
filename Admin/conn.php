@@ -1,19 +1,19 @@
 <?php
 /*****************************
-*Êý¾Ý¿âÁ¬½Ó
+*æ•°æ®åº“è¿žæŽ¥
 *****************************/
 $conn = mysql_connect("localhost","root","root");
 if (!$conn){
-	die("Á¬½ÓÊý¾Ý¿âÊ§°Ü£º" . mysql_error());
+	die("è¿žæŽ¥æ•°æ®åº“å¤±è´¥ï¼š" . mysql_error());
 }
 
 mysql_select_db("mingpiantest", $conn);
 
-header("Content-Type: text/html; charset=gbk");
-mysql_query("SET NAMES gbk");
+header("Content-Type: text/html; charset=utf-8");
+mysql_query("SET NAMES utf8");
 
 $timezone="Asia/Shanghai";
-date_default_timezone_set($timezone);//´óÖÐ»ªÊ±¼ä
+date_default_timezone_set($timezone);//å¤§ä¸­åŽæ—¶é—´
 
 mysql_close();
 

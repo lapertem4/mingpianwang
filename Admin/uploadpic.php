@@ -1,7 +1,7 @@
 
 
 <?php
-//ÉÏ´«ÎÄ¼şÀàĞÍÁĞ±í
+//ä¸Šä¼ æ–‡ä»¶ç±»å‹åˆ—è¡¨
 $uptypes=array(
     'image/jpg',
     'image/jpeg',
@@ -12,17 +12,17 @@ $uptypes=array(
     'image/x-png'
 );
 
-$max_file_size=2000000;     //ÉÏ´«ÎÄ¼ş´óĞ¡ÏŞÖÆ, µ¥Î»BYTE
-$destination_folder="../upload/"; //ÉÏ´«ÎÄ¼şÂ·¾¶
-$imgpreview=1;      //ÊÇ·ñÉú³ÉÔ¤ÀÀÍ¼(1ÎªÉú³É,ÆäËûÎª²»Éú³É);
-$imgpreviewsize=1/2;    //ËõÂÔÍ¼±ÈÀı
+$max_file_size=2000000;     //ä¸Šä¼ æ–‡ä»¶å¤§å°é™åˆ¶, å•ä½BYTE
+$destination_folder="../upload/"; //ä¸Šä¼ æ–‡ä»¶è·¯å¾„
+$imgpreview=1;      //æ˜¯å¦ç”Ÿæˆé¢„è§ˆå›¾(1ä¸ºç”Ÿæˆ,å…¶ä»–ä¸ºä¸ç”Ÿæˆ);
+$imgpreviewsize=1/2;    //ç¼©ç•¥å›¾æ¯”ä¾‹
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html" charset=gbk />
-<title>ZwelLÍ¼Æ¬ÉÏ´«³ÌĞò</title>
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+<title></title>
 <style type="text/css">
 
 body
@@ -40,13 +40,13 @@ input
 
 <body>
 <form enctype="multipart/form-data" method="post" name="upform">
-    ÃûÆ¬Ãû: <input name="cardname" type="text" id="cardname" size="15" /></br>
-    Ö°Òµ£º<input name="job" type="text" id="job" size="15" /></br>
-    ¼ò½é: <textarea name="comment" id="comment" rows="10" cols="45" sytle="resize:none;"></textarea>
-    À´Ò»·¢Í·Ïñ°É:
+    åç‰‡å: <input name="cardname" type="text" id="cardname" size="15" /></br>
+    èŒä¸šï¼š<input name="job" type="text" id="job" size="15" /></br>
+    ç®€ä»‹: <textarea name="comment" id="comment" rows="10" cols="45" sytle="resize:none;"></textarea>
+    æ¥ä¸€å‘å¤´åƒå§:
     <input name="upfile" type="file"></br>
-    ÔÊĞíÉÏ´«µÄÎÄ¼şÀàĞÍÎª:<?=implode(', ',$uptypes)?>
-    <input type="submit" value="ÉÏ´«"></br>
+    å…è®¸ä¸Šä¼ çš„æ–‡ä»¶ç±»å‹ä¸º:<?=implode(', ',$uptypes)?>
+    <input type="submit" value="ä¸Šä¼ "></br>
 
   </br>
   
@@ -56,24 +56,24 @@ input
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
     if (@!is_uploaded_file($_FILES["upfile"][tmp_name]))
-    //ÊÇ·ñ´æÔÚÎÄ¼ş
+    //æ˜¯å¦å­˜åœ¨æ–‡ä»¶
     {
-         echo "Í¼Æ¬²»´æÔÚ!";
+         echo "å›¾ç‰‡ä¸å­˜åœ¨!";
          exit;
     }
 
     $file = $_FILES["upfile"];
     if($max_file_size < $file["size"])
-    //¼ì²éÎÄ¼ş´óĞ¡
+    //æ£€æŸ¥æ–‡ä»¶å¤§å°
     {
-        echo "ÎÄ¼şÌ«´ó!";
+        echo "æ–‡ä»¶å¤ªå¤§!";
         exit;
     }
 
     if(!in_array($file["type"], $uptypes))
-    //¼ì²éÎÄ¼şÀàĞÍ
+    //æ£€æŸ¥æ–‡ä»¶ç±»å‹
     {
-        echo "ÎÄ¼şÀàĞÍ²»·û!".$file["type"];
+        echo "æ–‡ä»¶ç±»å‹ä¸ç¬¦!".$file["type"];
         exit;
     }
 
@@ -89,13 +89,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     $destination = $destination_folder.time().".".$ftype;
     if (file_exists($destination) && $overwrite != true)
     {
-        echo "Í¬ÃûÎÄ¼şÒÑ¾­´æÔÚÁË";
+        echo "åŒåæ–‡ä»¶å·²ç»å­˜åœ¨äº†";
         exit;
     }
 
     if(!move_uploaded_file ($filename, $destination))
     {
-        echo "ÒÆ¶¯ÎÄ¼ş³ö´í";
+        echo "ç§»åŠ¨æ–‡ä»¶å‡ºé”™";
         exit;
     }
 
@@ -109,10 +109,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     $sql = "INSERT INTO mingpian_card (name, picfile)
             VALUES ('$cardname','$picfile')";
     if(mysql_query($sql,$conn)){
-            echo " <font color=red>ÒÑ¾­³É¹¦ÉÏ´«</font><br>ÎÄ¼şÃû:  <font color=blue>".$destination_folder.$fname."</font><br>";
-            echo " ¿í¶È:".$image_size[0];
-            echo " ³¤¶È:".$image_size[1];
-            echo "<br> ´óĞ¡:".$file["size"]." bytes";
+            echo " <font color=red>å·²ç»æˆåŠŸä¸Šä¼ </font><br>æ–‡ä»¶å:  <font color=blue>".$destination_folder.$fname."</font><br>";
+            echo " å®½åº¦:".$image_size[0];
+            echo " é•¿åº¦:".$image_size[1];
+            echo "<br> å¤§å°:".$file["size"]." bytes";
     }else{
       echo mysql_error();
       exit('you piece of ..');
@@ -142,7 +142,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
             $simage =imagecreatefromwbmp($destination);
             break;
             default:
-            die("²»Ö§³ÖµÄÎÄ¼şÀàĞÍ");
+            die("ä¸æ”¯æŒçš„æ–‡ä»¶ç±»å‹");
             exit;
         }
 
@@ -151,10 +151,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
         switch($watertype)
         {
-            case 1:   //¼ÓË®Ó¡×Ö·û´®
+            case 1:   //åŠ æ°´å°å­—ç¬¦ä¸²
             imagestring($nimage,2,3,$image_size[1]-15,$waterstring,$black);
             break;
-            case 2:   //¼ÓË®Ó¡Í¼Æ¬
+            case 2:   //åŠ æ°´å°å›¾ç‰‡
             $simage1 =imagecreatefromgif("xplore.gif");
             imagecopy($nimage,$simage1,0,0,0,0,85,15);
             imagedestroy($simage1);
@@ -179,7 +179,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
             break;
         }
 
-        //¸²¸ÇÔ­ÉÏ´«ÎÄ¼ş
+        //è¦†ç›–åŸä¸Šä¼ æ–‡ä»¶
         imagedestroy($nimage);
         imagedestroy($simage);
     }
@@ -187,9 +187,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
     if($imgpreview==1)
     {
-    echo "<br>Í¼Æ¬Ô¤ÀÀ:<br>";
+    echo "<br>å›¾ç‰‡é¢„è§ˆ:<br>";
     echo "<img src=\"".$destination."\" width=".($image_size[0]*$imgpreviewsize)." height=".($image_size[1]*$imgpreviewsize);
-    echo " alt=\"Í¼Æ¬Ô¤ÀÀ:\rÎÄ¼şÃû:".$destination."\rÉÏ´«Ê±¼ä:\">";
+    echo " alt=\"å›¾ç‰‡é¢„è§ˆ:\ræ–‡ä»¶å:".$destination."\rä¸Šä¼ æ—¶é—´:\">";
     }
 }
 ?>

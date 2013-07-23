@@ -1,8 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
-<title>ÓÃ»§×¢²á</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ç”¨æˆ·æ³¨å†Œ</title>
   <style type="text/css">
     html{font-size:12px;}
   fieldset{width:520px; margin: 0 auto;}
@@ -18,19 +18,19 @@ function InputCheck(RegForm)
 {
   if (RegForm.username.value == "")
   {
-    alert("ÓÃ»§Ãû²»¿ÉÎª¿Õ!");
+    alert("ç”¨æˆ·åä¸å¯ä¸ºç©º!");
     RegForm.username.focus();
     return (false);
   }
   if (RegForm.password.value == "")
   {
-    alert("±ØĞëÉè¶¨µÇÂ½ÃÜÂë!");
+    alert("å¿…é¡»è®¾å®šç™»é™†å¯†ç !");
     RegForm.password.focus();
     return (false);
   }
   if (RegForm.repass.value != RegForm.password.value)
   {
-    alert("Á½´ÎÃÜÂë²»Ò»ÖÂ!");
+    alert("ä¸¤æ¬¡å¯†ç ä¸ä¸€è‡´!");
     RegForm.repass.focus();
     return (false);
   }
@@ -44,24 +44,24 @@ function InputCheck(RegForm)
 <body>
 <div>
 <fieldset>
-<legend>ÓÃ»§×¢²á</legend>
+<legend>ç”¨æˆ·æ³¨å†Œ</legend>
 <form name="RegForm" method="post" action="reg.php" onSubmit="return InputCheck(this)">
 <p>
-<label for="username" class="label">ÓÃ»§Ãû:</label>
+<label for="username" class="label">ç”¨æˆ·å:</label>
 <input id="username" name="username" type="text" class="input" />
-<span>(±ØÌî£¬3-15×Ö·û³¤¶È£¬Ö§³Öºº×Ö¡¢×ÖÄ¸¡¢Êı×Ö¼°_)</span>
+<span>(å¿…å¡«ï¼Œ3-15å­—ç¬¦é•¿åº¦ï¼Œæ”¯æŒæ±‰å­—ã€å­—æ¯ã€æ•°å­—åŠ_)</span>
 <p/>
 <p>
-<label for="password" class="label">ÃÜ Âë:</label>
+<label for="password" class="label">å¯† ç :</label>
 <input id="password" name="password" type="password" class="input" />
-<span>(±ØÌî£¬²»µÃÉÙÓÚ6Î»)</span>
+<span>(å¿…å¡«ï¼Œä¸å¾—å°‘äº6ä½)</span>
 <p/>
 <p>
-<label for="repass" class="label">ÖØ¸´ÃÜÂë:</label>
+<label for="repass" class="label">é‡å¤å¯†ç :</label>
 <input id="repass" name="repass" type="password" class="input" />
 <p/>
 <p>
-<input type="submit" name="submit" value="  Ìá½»×¢²á  " class="left" />
+<input type="submit" name="submit" value="  æäº¤æ³¨å†Œ  " class="left" />
 </p>
 </form>
 </fieldset>
@@ -69,36 +69,36 @@ function InputCheck(RegForm)
 
 <?php
 if(!isset($_POST['submit'])){
-	exit('·Ç·¨·ÃÎÊ!');
+  exit('éæ³•è®¿é—®!');
 }
 $username = $_POST['username'];
 $password = $_POST['password'];
-//×¢²áĞÅÏ¢ÅĞ¶Ï
+//æ³¨å†Œä¿¡æ¯åˆ¤æ–­
 if(!preg_match('/^[\w\x80-\xff]{3,15}$/', $username)){
-	exit('´íÎó£ºÓÃ»§Ãû²»·ûºÏ¹æ¶¨¡£<a href="javascript:history.back(-1);">·µ»Ø</a>');
+  exit('é”™è¯¯ï¼šç”¨æˆ·åä¸ç¬¦åˆè§„å®šã€‚<a href="javascript:history.back(-1);">è¿”å›</a>');
 }
 if(strlen($password) < 6){
-	exit('´íÎó£ºÃÜÂë³¤¶È²»·ûºÏ¹æ¶¨¡£<a href="javascript:history.back(-1);">·µ»Ø</a>');
+  exit('é”™è¯¯ï¼šå¯†ç é•¿åº¦ä¸ç¬¦åˆè§„å®šã€‚<a href="javascript:history.back(-1);">è¿”å›</a>');
 }
-//°üº¬Êı¾İ¿âÁ¬½ÓÎÄ¼ş
+//åŒ…å«æ•°æ®åº“è¿æ¥æ–‡ä»¶
 include('conn.php');
-//¼ì²âÓÃ»§ÃûÊÇ·ñÒÑ¾­´æÔÚ
+//æ£€æµ‹ç”¨æˆ·åæ˜¯å¦å·²ç»å­˜åœ¨
 $check_query = mysql_query("select user_id from mingpian_users where username='$username' limit 1");
 if(mysql_fetch_array($check_query)){
-	echo '´íÎó£ºÓÃ»§Ãû ',$username,' ÒÑ´æÔÚ¡£<a href="javascript:history.back(-1);">·µ»Ø</a>';
-	exit;
+  echo 'é”™è¯¯ï¼šç”¨æˆ·å ',$username,' å·²å­˜åœ¨ã€‚<a href="javascript:history.back(-1);">è¿”å›</a>';
+  exit;
 }
-//Ğ´ÈëÊı¾İ
+//å†™å…¥æ•°æ®
 date_default_timezone_set('Asia/Shanghai');
 $reg_date = getdate();
 $regdate = ("$reg_date[year]-$reg_date[mon]-$reg_date[mday] $reg_date[hours]:$reg_date[minutes]:$reg_date[seconds]");
 //print $regdate;
 $sql = "INSERT INTO mingpian_users(username,password,regdate)VALUES('$username','$password','$regdate')";
 if(mysql_query($sql,$conn)){
-	exit('ÓÃ»§×¢²á³É¹¦£¡µã»÷´Ë´¦ <a href="admin.html">µÇÂ¼</a>');
+  exit('ç”¨æˆ·æ³¨å†ŒæˆåŠŸï¼ç‚¹å‡»æ­¤å¤„ <a href="admin.html">ç™»å½•</a>');
 } else {
-	echo '±§Ç¸£¡Ìí¼ÓÊı¾İÊ§°Ü£º'.mysql_error().'<br />';
-	echo 'µã»÷´Ë´¦ <a href="javascript:history.back(-1);">·µ»Ø</a> ÖØÊÔ';
+  echo 'æŠ±æ­‰ï¼æ·»åŠ æ•°æ®å¤±è´¥ï¼š'.mysql_error().'<br />';
+  echo 'ç‚¹å‡»æ­¤å¤„ <a href="javascript:history.back(-1);">è¿”å›</a> é‡è¯•';
 }
 ?>
 

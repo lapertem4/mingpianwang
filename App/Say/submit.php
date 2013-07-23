@@ -11,7 +11,8 @@ require_once('conn.php');
 require_once('function.php');
 
 $txt=stripslashes($_POST['saytxt']);
-$txt=mysql_real_escape_string(strip_tags($txt),$link); //过滤HTML标签，并转义特殊字符
+//$txt=mysql_real_escape_string(strip_tags($txt),$link); //过滤HTML标签，并转义特殊字符
+$txt=mysql_real_escape_string(strip_tags($txt),$link); //修改：删除$link连接
 if(mb_strlen($txt)<1 || mb_strlen($txt)>140)
     die("0");
 $time=time();

@@ -1,11 +1,7 @@
 <?php
 /**
  * @时间转换函数和输出内容格式化函数
- * @2010 Helloweba.com,All Rights Reserved.
- * -----------------------------------------------------------------------------
- * @author: helloweba
- * @update: 2010-10-16
-*/
+ **/
 if(!defined('INCLUDE_CHECK')) die('You are not allowed to execute this file directly');
 
 
