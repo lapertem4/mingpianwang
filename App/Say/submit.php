@@ -2,9 +2,6 @@
 /**
  * @处理表单提交数据
  * @2010 Helloweba.com,All Rights Reserved.
- * -----------------------------------------------------------------------------
- * @author: Liurenfei
- * @update: 2010-10-16
 */
 define('INCLUDE_CHECK',1);
 require_once('conn.php');
