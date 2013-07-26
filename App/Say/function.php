@@ -1,7 +1,5 @@
 <?php
-/**
- * @时间转换函数和输出内容格式化函数
- **/
+/*时间转换函数和输出内容格式化函数*/
 if(!defined('INCLUDE_CHECK')) die('You are not allowed to execute this file directly');
 
 
@@ -14,7 +12,7 @@ function formatSay($say,$dt,$uid){
 	<p><strong><a href="#">demo_'.$uid.'</a></strong> '. preg_replace('/((?:http|https|ftp):\/\/(?:[A-Z0-9][A-Z0-9_-]*(?:\.[A-Z0-9][A-Z0-9_-]*)+):?(\d+)?\/?[^\s\"\']+)/i','<a href="$1" rel="nofollow" target="blank">$1</a>',$say).'
 	</p><div class="date">'.tranTime($dt).'</div>
 	</div>
-	<div class="clear"></div>
+	<div class="clear"></div>	
 	</div>';
 }
 
@@ -47,4 +45,5 @@ function tranTime($time) {
 	}
 	return $str;
 }
-?>
+
+

@@ -2,7 +2,7 @@
 $host="localhost";
 $db_user="root";
 $db_pass="root";
-$db_name="say";
+$db_name="mingpiantest";
 $timezone="Asia/Shanghai";
 
 $link=mysql_connect($host,$db_user,$db_pass);
