@@ -3,13 +3,19 @@
 if(!defined('INCLUDE_CHECK')) die('You are not allowed to execute this file directly');
 
 
-function formatSay($say,$dt,$uid){
+function formatSay($tag,$say,$dt,$uid){
 	$say=htmlspecialchars(stripslashes($say));
+
+	if(strlen($tag) != 0){
+		$tag = '<a href="topic.php?tag_code='.$tag.'">'.'#'.$tag.'#'.'</a>';
+	}else{
+		$tag = '';
+	}
 
 	return'
 	<div class="saylist"><a href="#"><img src="images/'.$uid.'.jpg" width="50" height="50" alt="demo" /></a>
 	<div class="saytxt">
-	<p><strong><a href="#">demo_'.$uid.'</a></strong> '. preg_replace('/((?:http|https|ftp):\/\/(?:[A-Z0-9][A-Z0-9_-]*(?:\.[A-Z0-9][A-Z0-9_-]*)+):?(\d+)?\/?[^\s\"\']+)/i','<a href="$1" rel="nofollow" target="blank">$1</a>',$say).'
+	<p><strong><a href="#">demo_'.$uid.'</a></strong> '. $tag. $say.'
 	</p><div class="date">'.tranTime($dt).'</div>
 	</div>
 	<div class="clear"></div>	

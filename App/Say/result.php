@@ -42,7 +42,8 @@ while ($row=mysql_fetch_array($query)) {
     $arr[] = array( 
         'uid'=>$row['userid'],
         'content'=>$row['content'], 
-        'date'=>trantime(($row['addtime'])) 
+        'date'=>trantime(($row['addtime'])),
+        'tag'=>'#'.$row['tag'].'#'
     ); 
 } 
 echo json_encode($arr);  //转换为json数据输出 

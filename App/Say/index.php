@@ -5,7 +5,7 @@ require_once('function.php');
 
 $query=mysql_query("select * from say order by id desc limit 0,10",$link);
 while ($row=mysql_fetch_array($query)) {
-  @$sayList.=formatSay($row['content'],$row['addtime'],$row['userid']);
+  @$sayList.=formatSay($row['tag'],$row['content'],$row['addtime'],$row['userid']);
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -13,14 +13,15 @@ while ($row=mysql_fetch_array($query)) {
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>话题</title>
-<link rel="stylesheet" type="text/css" href="../../public/css/index.css">
+<link rel="stylesheet" type="text/css" href="../../public/css/top.css">
 <style type="text/css">
 .demo{width:600px; margin:30px auto; color:#51555c}
 .demo h3{height:32px; line-height:32px; font-size:18px}
 .demo h3 span{float:right; font-size:32px; font-family:Georgia,serif; color:#ccc; overflow:hidden}
 .input{width:594px; height:58px; margin:5px 0 10px 0; padding:4px 2px; border:1px solid #aaa; font-size:12px; line-height:18px; overflow:hidden}
 .sub_btn{float:right; width:94px; height:28px;}
-.clear{clear:both}
+.clear{clear:left;}
+#saywrap{margin-top: 30px;}
 .saylist{margin:8px auto; padding:4px 0; border-bottom:1px dotted #d3d3d3}
 .saylist img{float:left; width:50px; margin:4px}
 .saytxt{float:right; width:530px; overflow:hidden}
@@ -29,10 +30,14 @@ while ($row=mysql_fetch_array($query)) {
 .date{color:#999; font-size: 14px;}
 .inact,.inact:hover{background:#f5f5f5; border:1px solid #eee; color:#aaa; cursor:auto;}
 #msg{color:#f30}
+#main .right{float: right; width: 320px;}
+#main .right .clear{height: 150px}
+#main .right .hotlist{height: auto; font-size: 14px;}
+
 </style>
 <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
 <script type="text/javascript" src="js/global.js"></script>
-<script type="text/javascript" src="js/function.js"></script>
+<!-- <script type="text/javascript" src="js/function.js"></script> -->
 </head>
 
 <body>
@@ -54,7 +59,27 @@ while ($row=mysql_fetch_array($query)) {
 </div>
 
 <div id="main">
-  <div class="demo">
+	<div class="right">
+	<div class="clear"></div>
+	<div class="hotlist">
+		<p>&nbsp;热门话题</p>
+		</br>
+		</br>
+		<table border="0" cellpadding="0" cellspacing="10">
+		<?php
+		require_once 'conn.php';
+		$sql = "SELECT tag, count(tag) as tag_count FROM `say` group by tag order by count(tag) desc limit 1,10";
+		$sqlconn = mysql_query($sql);
+		while ($data = mysql_fetch_array($sqlconn)) {
+			echo '<tr><td width="170px"><a href="topic.php?tag_code='.$data['tag'].'">'.'#'.$data['tag'].'#'.'</a></td>';
+			echo '<td>'.$data['tag_count'].'</td></tr>';
+		}
+		?>
+		</table>
+	</div>
+  
+  	</div>
+  	<div class="demo">
     <form id="myform" action="say.php" method="post">
       <h3><span class="counter">140</span>说说你想聊的话题...</h3>
       <textarea name="saytxt" id="saytxt" class="input" tabindex="1" rows="2" cols="40"></textarea>
@@ -63,12 +88,13 @@ while ($row=mysql_fetch_array($query)) {
       <span id="msg"></span>
       </p>
     </form>
-    <div class="clear"></div>
+  	<div class="clear"></div>
     <div id="saywrap">
      <?php echo $sayList;?>
     </div>
   </div>
 </div>
+
 <div id="footer">
 </div>
 </body>
