@@ -37,7 +37,7 @@ require_once('conn.php'); //连接数据库
 //$user = array('demo1','demo2','demo3','demo3','demo4'); 
 $page = intval($_GET['page']);  //获取请求的页数 
 $start = $page*10;
-$query=mysql_query("select * from say order by id desc limit $start,10"); 
+$query=mysql_query("select * from say_content order by id desc limit $start,10"); 
 while ($row=mysql_fetch_array($query)) { 
     $arr[] = array( 
         'uid'=>$row['userid'],

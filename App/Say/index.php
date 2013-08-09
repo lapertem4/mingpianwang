@@ -3,7 +3,7 @@ define('INCLUDE_CHECK',1);
 require_once('conn.php');
 require_once('function.php');
 
-$query=mysql_query("select * from say order by id desc limit 0,10",$link);
+$query=mysql_query("select * from say_content order by id desc limit 0,10",$link);
 while ($row=mysql_fetch_array($query)) {
   @$sayList.=formatSay($row['tag'],$row['content'],$row['addtime'],$row['userid']);
 }
@@ -68,7 +68,7 @@ while ($row=mysql_fetch_array($query)) {
 		<table border="0" cellpadding="0" cellspacing="10">
 		<?php
 		require_once 'conn.php';
-		$sql = "SELECT tag, count(tag) as tag_count FROM `say` group by tag order by count(tag) desc limit 1,10";
+		$sql = "SELECT tag, count(tag) as tag_count FROM `say_content` group by tag order by count(tag) desc limit 1,10";
 		$sqlconn = mysql_query($sql);
 		while ($data = mysql_fetch_array($sqlconn)) {
 			echo '<tr><td width="170px"><a href="topic.php?tag_code='.$data['tag'].'">'.'#'.$data['tag'].'#'.'</a></td>';

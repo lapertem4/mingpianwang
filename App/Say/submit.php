@@ -24,7 +24,7 @@ if(mb_strlen($txt)<1 || mb_strlen($txt)>140)
 $time = time();
 $userid = rand(0,7);
 
-$query = mysql_query("insert into say (userid,content,addtime,tag) values ('$userid','$txt','$time','$tag')");
+$query = mysql_query("insert into say_content (userid,content,addtime,tag) values ('$userid','$txt','$time','$tag')");
 if(mysql_affected_rows($link) != 1)
     die("0");
 echo formatSay($tag,$txt,$time,$userid);
